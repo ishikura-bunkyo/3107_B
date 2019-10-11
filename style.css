@@ -1,0 +1,37 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+header {
+	background-color: lightblue;
+	padding: 0;
+	margin: 0;
+}
+
+header h1 {
+	font-size: 36px;
+}
+
+div {
+	overflow: hidden;
+}
+
+article {
+	width: 500px;
+	float: left;
+}
+
+aside {
+	width: 200px;
+	float: right;
+}
+
+footer {
+	background-color: lightgray;
+}
+@media screen and ( max-width:700px ) {
+	article{
+		width:auto;
+		float:none;
+	}
+}
