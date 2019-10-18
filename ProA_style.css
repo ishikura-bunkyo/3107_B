@@ -1,0 +1,38 @@
+/* ページ全体の背景色などを設定 */
+main {
+	background: #efffff;
+}
+
+/* ページの見出し領域の背景色，画像などを設定（id属性で設定） */
+#bg-head {
+	background: #deedff url(../photos/header_back_ground.jpg) repeat-x;
+}
+
+/* class属性で設定した領域で背景を青系（#99e0ff）にする */
+.bg-lightblue{
+	background: #99e0ff;
+}
+
+.border-dashed{
+	border: 1pt;
+	border-style: dashed;
+}
+
+.border-radius{
+	border: 1pt;
+  border-radius: 10px;
+}
+
+.box-shadow{
+	box-shadow: 2px 2px 4px gray; /*影の幅 右 下　ぼかしの幅　影の色(カラーコードも可） */
+}
+
+/* 地図の表示領域の設定 */
+#map_here{
+	float: left;
+	clear: left;
+	width: 340px;
+	height: 240px;
+}
+jumbotron-heading{
+}
