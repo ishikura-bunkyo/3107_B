@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>若さとスポーツを。</title>
+  
+  <!-- CSSの設定（Bootstrap 4を利用する→部品の使い方は各自で調べること） -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css'>
+  <!-- CSSの設定（演習ではcssフォルダのProA_style.cssを編集してクラスを設定すること） -->
+	<link rel="stylesheet" href="css/ProA_style.css">
+  
+</head>
+
+<!-- ページ内の字下げ（インデント）はすべてTabで行っている -->
+<body>
+	<header>
+	<!-- ページ上部に常時表示される部分にBootstrapのNavbarというコンポーネント（部品）を表示 -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">フロントページ</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">リストのページ（このページ）</a><!-- hrefのリンク先は各自で修正すること -->
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="detail_example.html?id=0"">詳細1</a><!-- カテゴリ無しの場合はここを増やし，hrefのリンク先は各自で修正すること -->
+            </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">カテゴリ</a><!-- hrefのリンク先は各自で修正すること -->
+            <div class="dropdown-menu" aria-labelledby="navbarDropDown"><!--クリックされて出てくるメニュー（枠）-->
+              <a class="dropdown-item" href="detail_example.html?id=1">詳細2</a><!--ドロップダウンメニューの項目 -->
+              <a class="dropdown-item" href="detail_example.html?id=2">詳細3</a>
+              <a class="dropdown-item" href="detail_example.html?id=3">詳細4</a>
+            </div>
+          </li>
+          <!-- ここに項目<li>～</li>を増やす -->
+      </ul>
+      <!--
+      <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    -->
+      </div>
+    </nav>
+	</header>
+
+	<main role="main" class="pt-5">
+        <!-- ページの見出し -->
+		<section class="jumbotron text-center my-5 mx-5" id="bg-head">
+	  	<div class="container">
+     		<h1 class="jumbotron-heading">ページの見出し</h1>
+     		<p>ここにページ全体の説明などを書き込みます．</p>
+			</div>
+    </section>
+
+    <!-- リスト表示のためコンポーネントをJavaScriptから挿入 -->
+    <!-- 他のコンポーネント→https://getbootstrap.com/docs/4.1/examples/ -->
+    <div id="list_content" class="m-3">
+      <!-- 繰り返し内容の部分を作成して表示が確認できたら，作成したHTMLを*_list.js内で作成するようにして，再びコメントアウト -->
+     <!--
+     <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading bg-lightblue">紹介対象のなまえ
+          </h2>
+          <p class="lead">概要説明（施設や場所・授業→紹介文，料理など→価格）</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" src="./photos/thumnail_sample_300.jpg" alt="画像の代替テキスト">
+       </div>
+      </div>
+      -->
+    </div>
+    <hr>
+  </main>
+  <!--フッターの表示 -->
+  <footer>
+   (C) All Right Reserved, 2015-2019, Project A 
+  </footer>
+
+  <!-- JavaScriptのライブラリ（jQueryは基本ライブラリ+Bootstrap用のJavaScriptファイル） -->
+  <script
+  	src="https://code.jquery.com/jquery-3.4.1.min.js"
+  	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  	crossorigin="anonymous"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- jQueryを用いてオープンデータを読み取り，要素を追加する -->
+  <!-- オープンデータを利用しない場合は，以下の<script>～</script>をコメントアウトする -->
+  <script src="js/readLinkDataJSON_list.js"></script>
+  <!-- 各グループで作成するJSONは必ず読み込むため，LinkDataからのデータを使うとき以外は，以下の<script>～</script>をコメントアウトしてはならない -->
+  <script src="js/readJSON_list.js"></script>
+
+</body>
+
+</html>
