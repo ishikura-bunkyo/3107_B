@@ -1,0 +1,12 @@
+/* 以下は，第9回までのところで余裕のある時に利用 */
+レビュー投稿を保存するためのテーブルを作成：
+
+CREATE TABLE review (id SERIAL PRIMARY KEY,
+ obj_id INTEGER NOT NUL,
+ user_name VARCHAR NOT NULL,
+ score INTEGER,
+ text TEXT);
+
+
+
+
