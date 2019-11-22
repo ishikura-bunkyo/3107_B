@@ -1,11 +1,11 @@
 /* ページ全体の背景色などを設定 */
 main {
-	background: #efffff;
+	background: lemonchiffon;
 }
 
 /* ページの見出し領域の背景色，画像などを設定（id属性で設定） */
 #bg-head {
-	background: #deedff url(../photos/header_back_ground.jpg) repeat-x;
+	background: aliceblue url(../photos/header_back_ground.jpg) repeat-x;
 }
 
 /* class属性で設定した領域で背景を青系（#99e0ff）にする */
