@@ -30,7 +30,7 @@ if(isset($_POST["user_name"])){//hiddenタイプで送信されたmethodの値�
 			$result = pg_query($connect,$sql);
 			pg_close($connect);
 
-			if(! $result){ echo "$sqlの実行に失敗しました。\n\n"; }
+			if(! $result){ echo "{$sql}の実行に失敗しました。\n\n"; }
 			echo "$sql\n";
 			echo "を実行しました。\n\n";
 			//元のページに戻る場合は，上2行のecho文をコメントアウトし，以下の2行のコメントを外す
